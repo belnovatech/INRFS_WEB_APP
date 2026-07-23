@@ -1,0 +1,62 @@
+.inrfs-navbar {
+  background: #fafbfe;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.inrfs-navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.inrfs-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inrfs-logo-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--brand-blue);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inrfs-logo-text {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--brand-blue);
+  letter-spacing: 0.01em;
+}
+
+.inrfs-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #333c4d;
+}
+
+.inrfs-nav-links a:hover {
+  color: var(--brand-blue);
+}
+
+.inrfs-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,0 +1,73 @@
+.inrfs-footer {
+  background: #0b1140;
+  color: #b7bcda;
+  padding: 56px 32px 24px;
+}
+
+.footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 36px;
+  padding-bottom: 36px;
+}
+
+.footer-logo-text {
+  color: #ffffff;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 14px;
+  color: #9aa1c7;
+  max-width: 270px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-col a {
+  font-size: 13px;
+  color: #9aa1c7;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: #7b82ab;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
