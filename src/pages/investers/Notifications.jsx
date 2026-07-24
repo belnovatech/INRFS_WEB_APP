@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle2, Award, DollarSign, Bell, Mail, Check } from "lucide-react";
+import { CheckCircle2, Award, Bell, Mail, Check } from "lucide-react";
 import { useInvestorData } from "./InvestorDataContext";
 import "../../Styles/Investor/Notifications.css";
 

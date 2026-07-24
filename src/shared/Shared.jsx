@@ -6,17 +6,17 @@ export function formatINR(n) {
     return "₹" + Number(n || 0).toLocaleString("en-IN");
 }
 
-const statusClassMap = {
-    Active: "status-badge--active",
-    Completed: "status-badge--completed",
-    Approved: "status-badge--approved",
-    "Pending Approval": "status-badge--pending",
-    Rejected: "status-badge--rejected",
-};
+// const statusClassMap = {
+//     Active: "status-badge--active",
+//     Completed: "status-badge--completed",
+//     Approved: "status-badge--approved",
+//     "Pending Approval": "status-badge--pending",
+//     Rejected: "status-badge--rejected",
+// };
 
 export function StatusBadge({ status }) {
-    const modifier = statusClassMap[status] || "status-badge--completed";
-    return <span className={'status-badge ${modifier}'}>{status}</span>;
+    // const modifier = statusClassMap[status] || "status-badge--completed";
+    // return <span className={'status-badge ${modifier}'}>{status}</span>;
 }
 
 export function StatCard({ label, value, accent }) {
