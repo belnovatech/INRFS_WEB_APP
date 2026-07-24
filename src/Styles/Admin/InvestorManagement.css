@@ -245,6 +245,93 @@
   gap: 6px;
 }
 
+/* Add Investor modal — append these rules to InvestorManagement.css */
+
+.im-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.im-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 480px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.im-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.im-modal-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.im-modal-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.im-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.im-form-row label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.im-form-row input,
+.im-form-row select {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.im-form-row-split {
+  display: flex;
+  gap: 14px;
+}
+
+.im-error {
+  font-size: 12px;
+  color: #d33;
+}
+
+.im-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.im-no-results {
+  text-align: center;
+  padding: 24px;
+  color: #888;
+  font-size: 14px;
+}
+
 .im-page-btn {
   width: 28px;
   height: 28px;

@@ -13,25 +13,23 @@ const steps = [
 
 export default function Register() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    mobile: "",
-    email: "",
-    dob: "",
-    aadhaar: "",
-    pan: "",
-    address: "",
-    city: "",
-    state: "",
-    pin: "",
-  });
-  const [documents, setDocuments] = useState({
-    aadhaarFront: null,
-    aadhaarBack: null,
-    pan: null,
-    photo: null,
-    passbook: null,
-  });
+const [formData, setFormData] = useState({
+  fullName: "",
+  mobile: "",
+  email: "",
+  dob: "",
+  aadhaar: "",
+  address: "",
+  city: "",
+  state: "",
+  pin: "",
+});
+const [documents, setDocuments] = useState({
+  aadhaarFront: null,
+  aadhaarBack: null,
+  photo: null,
+  passbook: null,
+});
   const [agreed, setAgreed] = useState(false);
 
   const goNext = () => setCurrentStep((s) => Math.min(s + 1, 3));

@@ -32,7 +32,7 @@ const roles = [
 ];
 
 const roleRedirects = {
-  investor: "/admin/dashboard",
+  investor: "/investor/dashboard",
   admin: "/admin/dashboard",
   superadmin: "/admin/dashboard",
   branchmanager: "/admin/dashboard",

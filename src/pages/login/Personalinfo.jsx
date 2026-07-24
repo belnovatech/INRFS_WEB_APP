@@ -75,17 +75,6 @@ export default function PersonalInfoStep({ formData, setFormData, onNext }) {
           />
         </div>
 
-        <div className="reg-field">
-          <label>
-            PAN Number <span className="req">*</span>
-          </label>
-          <input
-            type="text"
-            placeholder="ABCDE1234F"
-            value={formData.pan}
-            onChange={update("pan")}
-          />
-        </div>
 
         <div className="reg-field reg-field-full">
           <label>

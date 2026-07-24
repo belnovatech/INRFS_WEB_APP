@@ -1,0 +1,176 @@
+/* ==========================================================================
+   KycApprovals.css
+   Split-view layout for the KYC Approvals screen: application list on the
+   left, review detail panel on the right.
+   ========================================================================== */
+
+@import "./common.css";
+
+.kyc-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.kyc-list-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.kyc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kyc-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+  padding: 10px 10px;
+  text-align: left;
+}
+
+.kyc-list-item:hover {
+  background: #f7f8fc;
+}
+
+.kyc-list-item--active {
+  background: var(--brand-blue-soft);
+  border-left-color: var(--brand-blue);
+}
+
+.kyc-list-item__name {
+  font-size: 12.5px;
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: var(--text-dark);
+}
+
+.kyc-list-item__id {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.kyc-detail-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.kyc-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.kyc-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.kyc-field {
+  background: #f8f9fc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.kyc-field__label {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.kyc-field__value {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.kyc-doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.kyc-doc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 9px;
+  padding: 11px 13px;
+}
+
+.kyc-doc-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--brand-blue-soft);
+  color: var(--brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kyc-doc-name {
+  flex: 1;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.kyc-remarks {
+  width: 100%;
+  min-height: 70px;
+  border: 1px solid var(--border-light);
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 12.5px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 18px;
+}
+
+.kyc-remarks:focus {
+  border-color: var(--brand-blue);
+}
+
+.kyc-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .kyc-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .kyc-field-grid {
+    grid-template-columns: 1fr;
+  }
+}

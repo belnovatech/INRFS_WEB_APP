@@ -1,0 +1,20 @@
+.notif-list { display: flex; flex-direction: column; gap: 10px; }
+.notif-row {
+  display: flex; gap: 12px; background: #fff; border: 1px solid #eef1f7;
+  border-radius: 10px; padding: 14px 16px;
+}
+.notif-row--unread { border-left: 3px solid #2f5cf0; background: #f8faff; }
+.notif-icon {
+  width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.notif-icon--success { background: #dcfce7; color: #16a34a; }
+.notif-icon--info { background: #e0e7ff; color: #4338ca; }
+.notif-icon--warning { background: #fef3c7; color: #d97706; }
+.notif-title { font-size: 13.5px; font-weight: 600; color: #1e293b; margin: 0; }
+.notif-badge-new {
+  background: #2f5cf0; color: #fff; font-size: 10px; font-weight: 700;
+  padding: 1px 6px; border-radius: 10px; margin-left: 6px;
+}
+.notif-text { font-size: 12.5px; color: #64748b; margin: 3px 0; }
+.notif-time { font-size: 11px; color: #94a3b8; margin: 0; }

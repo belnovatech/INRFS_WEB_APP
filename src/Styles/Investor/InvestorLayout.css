@@ -1,0 +1,216 @@
+/* ===== Layout shell ===== */
+.investor-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #f4f6fb;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.investor-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: #0f1729;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 14px;
+}
+
+.investor-logo { display: flex; align-items: center; gap: 10px; padding: 6px 8px 18px; }
+.investor-logo-badge {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: #2f5cf0; color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; font-size: 13px;
+}
+.investor-logo-title { font-weight: 700; color: #fff; font-size: 14px; }
+.investor-logo-sub { font-size: 10px; letter-spacing: 0.5px; color: #64748b; }
+
+.investor-portal-pill {
+  margin: 4px 8px 16px; padding: 8px 10px; border-radius: 8px;
+  background: #2f5cf0; color: #fff; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.5px; text-align: center;
+}
+
+.investor-nav { display: flex; flex-direction: column; gap: 2px; }
+.investor-nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: 8px; font-size: 13px;
+  color: #94a3b8; text-decoration: none; position: relative;
+}
+.investor-nav-item:hover { background: #1a2338; color: #e2e8f0; }
+.investor-nav-item-active { background: #2f5cf0; color: #fff; }
+.investor-nav-badge {
+  margin-left: auto; background: #ef4444; color: #fff; font-size: 10px;
+  border-radius: 10px; padding: 1px 6px; font-weight: 700;
+}
+
+.investor-sidebar-footer { border-top: 1px solid #1e293b; padding-top: 14px; }
+.investor-user { display: flex; align-items: center; gap: 10px; padding: 0 8px 10px; }
+.investor-user-avatar {
+  width: 32px; height: 32px; border-radius: 50%; background: #6366f1; color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;
+}
+.investor-user-name { color: #fff; font-size: 13px; font-weight: 600; }
+.investor-user-email { color: #64748b; font-size: 11px; }
+.investor-logout {
+  width: 100%; display: flex; align-items: center;margin-bottom: 30px; gap: 8px; justify-content: center;
+  background: transparent; border: 1px solid #dc2626; color: #f87171;
+  padding: 8px; border-radius: 8px; font-size: 12px; cursor: pointer;
+}
+.investor-logout:hover { background: rgba(220,38,38,0.1); }
+
+.investor-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+.investor-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fff; border-bottom: 1px solid #e5e9f2; padding: 12px 24px;
+  flex-shrink: 0;
+}
+.investor-breadcrumb { font-size: 12px; color: #64748b; }
+.investor-breadcrumb-link { color: #2f5cf0; cursor: pointer; }
+.investor-breadcrumb-sep { margin: 0 6px; }
+.investor-breadcrumb-current { color: #1e293b; font-weight: 600; }
+
+.investor-topbar-right { display: flex; align-items: center; gap: 16px; }
+.investor-search {
+  display: flex; align-items: center; gap: 8px; background: #f1f4f9;
+  border-radius: 8px; padding: 7px 12px; color: #94a3b8; width: 220px;
+}
+.investor-search input { border: none; background: transparent; outline: none; font-size: 13px; width: 100%; }
+.investor-profile { display: flex; align-items: center; gap: 8px; }
+.investor-profile-avatar {
+  width: 30px; height: 30px; border-radius: 50%; background: #6366f1; color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;
+}
+.investor-profile-name { font-size: 12px; font-weight: 600; color: #1e293b; }
+.investor-profile-role { font-size: 10px; color: #94a3b8; }
+
+.investor-content {
+  padding: 22px 28px;
+  flex: 1;
+  overflow-y: auto;
+}
+.investor-page-title { font-size: 20px; font-weight: 700; color: #0f1729; margin-bottom: 4px; }
+
+/* ===== Shared base classes used across all investor pages ===== */
+.investor-page { display: flex; flex-direction: column; gap: 18px; }
+.investor-page-subtitle { color: #64748b; font-size: 13px; margin: 0; }
+.investor-section__title { font-size: 14px; font-weight: 700; color: #0f1729; margin: 0 0 4px; }
+
+.investor-page-actions { display: flex; margin-bottom: -4px; }
+.investor-page-actions--end { justify-content: flex-end; }
+.investor-page-actions--between { justify-content: space-between; align-items: center; }
+
+.investor-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; padding: 8px 14px;
+  border-radius: 8px; cursor: pointer; border: 1px solid transparent;
+  transition: background 0.15s ease;
+}
+.investor-btn--primary { background: #2f5cf0; color: #fff; }
+.investor-btn--primary:hover { background: #2549c9; }
+.investor-btn--primary:disabled { background: #94a3b8; cursor: not-allowed; }
+.investor-btn--outline { background: #fff; color: #334155; border-color: #e2e8f0; }
+.investor-btn--outline:hover { background: #f8fafc; }
+.investor-btn--block { width: 100%; justify-content: center; margin-bottom: 8px; }
+.investor-btn--pill { border-radius: 20px; padding: 6px 12px; font-size: 12px; }
+.investor-btn--link { background: none; border: none; color: #2f5cf0; font-size: 12px; padding: 0; }
+
+.mono { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13px; }
+.link { color: #2f5cf0; cursor: pointer; }
+.amount-positive { color: #16a34a; }
+
+.rate-pill {
+  background: #eef2ff; color: #4338ca; font-size: 11px; font-weight: 600;
+  padding: 3px 8px; border-radius: 6px;
+}
+
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.data-table th {
+  text-align: left; color: #94a3b8; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.4px; padding: 10px 12px; border-bottom: 1px solid #eef1f7;
+}
+.data-table td { padding: 12px; border-bottom: 1px solid #f1f4f9; color: #1e293b; }
+.data-table tbody tr:hover { background: #fafbfd; }
+.row-flash { animation: rowFlash 1.6s ease-out; }
+@keyframes rowFlash {
+  0% { background: #eaf1ff; }
+  100% { background: transparent; }
+}
+
+.admin-table-actions { display: flex; gap: 8px; }
+.admin-table-actions button {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: #f1f4f9; border: none; padding: 6px 8px; border-radius: 6px;
+  cursor: pointer; color: #475569; font-size: 12px;
+}
+.admin-icon-btn--primary { background: #2f5cf0 !important; color: #fff !important; }
+.admin-table-footer { padding: 12px; font-size: 12px; color: #94a3b8; }
+
+.investor-table-card {
+  background: #fff; border-radius: 12px; border: 1px solid #eef1f7;
+  overflow: hidden;
+}
+.investor-table-card__header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-bottom: 1px solid #eef1f7;
+}
+.investor-search-input {
+  border: 1px solid #e2e8f0; border-radius: 8px; padding: 7px 10px;
+  font-size: 13px; width: 240px; outline: none;
+}
+
+.switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.switch-slider {
+  position: absolute; cursor: pointer; inset: 0; background: #cbd5e1;
+  border-radius: 22px; transition: 0.2s;
+}
+.switch-slider::before {
+  content: ""; position: absolute; height: 16px; width: 16px; left: 3px; bottom: 3px;
+  background: #fff; border-radius: 50%; transition: 0.2s;
+}
+.switch input:checked + .switch-slider { background: #2f5cf0; }
+.switch input:checked + .switch-slider::before { transform: translateX(18px); }
+
+.investor-bell {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.investor-bell-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 1px 5px;
+  line-height: 1.2;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.status-badge--active { background: #dcfce7; color: #16a34a; }
+.status-badge--completed { background: #e0e7ff; color: #4338ca; }
+.status-badge--approved { background: #dcfce7; color: #16a34a; }
+.status-badge--pending { background: #fef3c7; color: #d97706; }
+.status-badge--rejected { background: #fee2e2; color: #dc2626; }

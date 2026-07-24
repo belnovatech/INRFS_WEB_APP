@@ -1,0 +1,71 @@
+.invest-layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 900px) { .invest-layout { grid-template-columns: 1fr; } }
+
+.invest-form-card, .invest-summary-card {
+  background: #fff; border-radius: 12px; padding: 22px; border: 1px solid #eef1f7;
+}
+
+.invest-stepper { display: flex; align-items: center; margin-bottom: 26px; }
+.invest-step { display: flex; flex-direction: column; align-items: center; gap: 6px; color: #94a3b8; }
+.invest-step__num {
+  width: 30px; height: 30px; border-radius: 50%; background: #f1f4f9;
+  display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;
+}
+.invest-step--active { color: #2f5cf0; }
+.invest-step--active .invest-step__num { background: #2f5cf0; color: #fff; }
+.invest-step__label { font-size: 11px; }
+.invest-step__connector { flex: 1; height: 1px; background: #e2e8f0; margin: 0 10px 22px; }
+
+.invest-field-label { font-size: 13px; font-weight: 600; color: #334155; margin: 16px 0 8px; display: block; }
+.invest-required { color: #ef4444; }
+
+.invest-amount-input {
+  display: flex; align-items: center; gap: 6px; border: 1px solid #e2e8f0;
+  border-radius: 8px; padding: 10px 12px;
+}
+.invest-amount-input input { border: none; outline: none; font-size: 15px; width: 100%; }
+
+.invest-quick-amounts { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.invest-chip {
+  padding: 7px 12px; border-radius: 8px; border: 1px solid #e2e8f0;
+  background: #fff; font-size: 12.5px; cursor: pointer; color: #334155;
+}
+.invest-chip--active { background: #2f5cf0; color: #fff; border-color: #2f5cf0; }
+
+.invest-tenure-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 600px) { .invest-tenure-grid { grid-template-columns: repeat(2, 1fr); } }
+.invest-tenure-card {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 8px;
+  background: #fff; cursor: pointer;
+}
+.invest-tenure-card--active { border-color: #2f5cf0; background: #f5f8ff; }
+.invest-tenure-card__months { font-size: 20px; font-weight: 700; color: #0f1729; }
+.invest-tenure-card__unit { font-size: 11px; color: #94a3b8; }
+.invest-tenure-card__rate { font-size: 12px; color: #16a34a; font-weight: 600; margin-top: 4px; }
+
+.invest-form-actions { display: flex; justify-content: space-between; margin-top: 24px; }
+.invest-form-actions--center { justify-content: center; gap: 12px; }
+
+.invest-summary-row {
+  display: flex; justify-content: space-between; padding: 10px 0;
+  border-bottom: 1px solid #f1f4f9; font-size: 13px; color: #475569;
+}
+.invest-summary-row--total {
+  font-weight: 700; color: #0f1729; border-bottom: none; padding-top: 14px; font-size: 14px;
+}
+
+/* payment step */
+.invest-payment-options { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.invest-payment-option {
+  display: flex; align-items: center; gap: 10px; border: 1px solid #e2e8f0;
+  border-radius: 8px; padding: 12px; font-size: 13px; cursor: pointer;
+}
+.invest-payment-option--active { border-color: #2f5cf0; background: #f5f8ff; }
+.invest-payment-note { font-size: 13px; color: #64748b; margin-top: 16px; }
+
+/* confirmation step */
+.invest-confirmation-step { text-align: center; padding: 30px 10px; }
+.invest-confirmation-icon { color: #16a34a; display: inline-flex; margin-bottom: 10px; }
+.invest-confirmation-title { font-size: 18px; font-weight: 700; color: #0f1729; margin: 4px 0; }
+.invest-confirmation-sub { font-size: 13px; color: #64748b; max-width: 420px; margin: 0 auto; }
